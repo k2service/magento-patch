@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <K2service_Patch>
+            <version>1.0.0</version>
+        </K2service_Patch>
+    </modules>
+    <global>
+        <helpers>
+            <k2service_patch>
+                <class>K2service_Patch_Helper</class>
+            </k2service_patch>
+        </helpers>
+        <models>
+            <k2service_patch>
+                <class>K2service_Patch_Model</class>
+                <resourceModel>k2service_patch_resource</resourceModel>
+            </k2service_patch>
+            <k2service_patch_resource>
+                <class>K2service_Patch_Model_Resource</class>
+            </k2service_patch_resource>
+            <catalog_resource>
+                <rewrite>
+                    <product_indexer_eav_source>K2service_Patch_Model_Resource_Catalog_Product_Indexer_Eav_Source</product_indexer_eav_source>
+                </rewrite>
+            </catalog_resource>
+        </models>
+    </global>
+</config>

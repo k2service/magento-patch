@@ -1,0 +1,4 @@
+# app/code
+app/code/local/K2service/Patch            app/code/local/K2service/Patch
+# app/etc
+app/etc/modules/K2service_Patch.xml            app/etc/modules/K2service_Patch.xml

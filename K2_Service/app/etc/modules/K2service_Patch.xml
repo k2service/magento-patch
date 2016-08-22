@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <K2service_Patch>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog/>
+            </depends>
+        </K2service_Patch>
+    </modules>
+</config>
