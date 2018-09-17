@@ -49,14 +49,14 @@ class K2service_Patch_Model_Resource_Catalog_Product_Indexer_Eav_Source
         $productValueExpression = $adapter->getCheckSql('pvs.value_id > 0', 'pvs.value', 'pvd.value');
         $select = $adapter->select()
             ->from(
-                ['pvd' => $this->getValueTable('catalog/product', 'varchar')],
+                ['pvd' => $this->getValueTable('catalog/product', 'text')],
                 ['entity_id', 'attribute_id'])
             ->join(
                 ['cs' => $this->getTable('core/store')],
                 '',
                 ['store_id'])
             ->joinLeft(
-                ['pvs' => $this->getValueTable('catalog/product', 'varchar')],
+                ['pvs' => $this->getValueTable('catalog/product', 'text')],
                 'pvs.entity_id = pvd.entity_id AND pvs.attribute_id = pvd.attribute_id'
                 . ' AND pvs.store_id=cs.store_id',
                 ['value' => $productValueExpression])
